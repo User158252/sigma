@@ -16,12 +16,12 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 	sigma:ClickButton2(Vector2.new())
 end)
 
-local chatbotenabled = true
+local chatbotenabled = false
 local autolobbyenabled = false
 local cupsenabled = false
 local tictactoeenabled = false
 local priceisrightenabled = false
-local enabled = true
+local enabled = false
 
 local localPlayer = game:GetService("Players").LocalPlayer
 local currentCamera = game:GetService("Workspace").CurrentCamera
@@ -83,7 +83,7 @@ local games = {
     "Cups",
     --"BlockDrop"
 }
-local gamepasses = getgenv().gamepassIDs = {["10"] = {1532425154, 1534715533},["20"] = {1534661546, 1532409362},["50"] = {1535653260, 1533112590,}}
+local gamepasses = getgenv().gamepassIDs
 if #gamepasses == 0 then
     error("u forgot ur gamepasses")
   return
